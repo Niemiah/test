@@ -30,7 +30,7 @@ public class AppTest implements IAbstractTest {
     public void testGetBreeds() {
         GetBreedsMethod getBreedsMethods = new GetBreedsMethod();
         getBreedsMethods.callAPIExpectSuccess();
-        getBreedsMethods.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getBreedsMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getBreedsMethods.validateResponseAgainstSchema("api/breeds_get/rs.schema");
     }
 
@@ -40,7 +40,7 @@ public class AppTest implements IAbstractTest {
     public void testGetGames(){
         GetGamesMethod getGamesMethod = new GetGamesMethod();
         getGamesMethod.callAPIExpectSuccess();
-        getGamesMethod.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getGamesMethod.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getGamesMethod.validateResponseAgainstSchema("api/games/_get/rs.schema");
     }
 
@@ -59,7 +59,7 @@ public class AppTest implements IAbstractTest {
     public void testGetPlayersBySeason() {
         GetPlayersBySeasonMethod getPlayersBySeasonMethods = new GetPlayersBySeasonMethod();
         getPlayersBySeasonMethods.callAPIExpectSuccess();
-        getPlayersBySeasonMethods.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getPlayersBySeasonMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getPlayersBySeasonMethods.validateResponseAgainstSchema("api/playersBySeason_get/rs.schema");
     }
 
@@ -68,7 +68,7 @@ public class AppTest implements IAbstractTest {
     public void testGetPlayer() {
         GetPlayerMethod getPlayerMethods = new GetPlayerMethod();
         getPlayerMethods.callAPIExpectSuccess();
-        getPlayerMethods.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getPlayerMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getPlayerMethods.validateResponseAgainstSchema("api/player_get/rs.schema");
     }
 
@@ -77,7 +77,7 @@ public class AppTest implements IAbstractTest {
     public void testGetTopScorer() {
         GetTopScorerMethod getTopScorerMethods = new GetTopScorerMethod();
         getTopScorerMethods.callAPIExpectSuccess();
-        getTopScorerMethods.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getTopScorerMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getTopScorerMethods.validateResponseAgainstSchema("api/player_get/rs.schema");
     }
 

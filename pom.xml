@@ -5,7 +5,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.solvd.testautomation</groupId>
-	<artifactId>testautomation</artifactId>
+	<artifactId>test</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>test-automation</name>

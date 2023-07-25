@@ -9,7 +9,7 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
 
-@Endpoint(url = "${base_url}activity/", methodType = HttpMethodType.GET)
+@Endpoint(url = "${base_url}activity?key=5881028", methodType = HttpMethodType.GET)
 @ResponseTemplatePath(path = "api/activity_get/rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
 public class GetActivityMethod extends AbstractApiMethodV2 {
