@@ -41,7 +41,7 @@ public class APITest implements IAbstractTest {
     public void testGetGames(){
         GetGamesMethod getGamesMethod = new GetGamesMethod();
         getGamesMethod.callAPIExpectSuccess();
-        getGamesMethod.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getGamesMethod.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getGamesMethod.validateResponseAgainstSchema("api/games/_get/rs.schema");
     }
 
