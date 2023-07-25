@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "count": { "type": "integer" },
+    "next": { "type": "string", "nullable": true },
+    "previous": { "type": "string", "nullable": true },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "player_name": { "type": "string" },
+          "age": { "type": "integer" },
+          "games": { "type": "integer" },
+          "games_started": { "type": "integer" },
+          "minutes_played": { "type": "integer" },
+          "field_goals": { "type": "integer" },
+          "field_attempts": { "type": "integer" },
+          "field_percent": { "type": "string", "pattern": "^0\.[0-9]{3}$" },
+          "three_fg": { "type": "integer" },
+          "three_attempts": { "type": "integer" },
+          "three_percent": { "type": "string", "pattern": "^0\.[0-9]{3}$" },
+          "two_fg": { "type": "integer" },
+          "two_attempts": { "type": "integer" },
+          "two_percent": { "type": "string", "pattern": "^0\.[0-9]{3}$" },
+          "effect_fg_percent": { "type": "string", "pattern": "^0\.[0-9]{3}$" },
+          "ft": { "type": "integer" },
+          "fta": { "type": "integer" },
+          "ft_percent": { "type": "string", "pattern": "^0\.[0-9]{3}$" },
+          "ORB": { "type": "integer" },
+          "DRB": { "type": "integer" },
+          "TRB": { "type": "integer" },
+          "AST": { "type": "integer" },
+          "STL": { "type": "integer" },
+          "BLK": { "type": "integer" },
+          "TOV": { "type": "integer" },
+          "PF": { "type": "integer" },
+          "PTS": { "type": "integer" },
+          "team": { "type": "string" },
+          "season": { "type": "integer" }
+        }
+      }
+    }
+  }
+}

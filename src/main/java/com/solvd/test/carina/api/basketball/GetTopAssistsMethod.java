@@ -9,11 +9,11 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
 
-@Endpoint(url = "${base_url}api/playerdata/name/Nikola Jokić", methodType = HttpMethodType.GET)
-@ResponseTemplatePath(path = "api/player_get/rs.json")
+@Endpoint(url = "${base_url}api/top_assists/totals/2023/", methodType = HttpMethodType.GET)
+@ResponseTemplatePath(path = "api/assists_get/rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-public class GetPlayerMethod extends AbstractApiMethodV2 {
-    public GetPlayerMethod(){
+public class GetTopAssistsMethod extends AbstractApiMethodV2 {
+    public GetTopAssistsMethod(){
         replaceUrlPlaceholder("base_url", Configuration.getRequired("ball_url"));
     }
 }

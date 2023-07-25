@@ -2,9 +2,10 @@ package com.solvd.test.carina;
 
 import com.solvd.test.carina.api.basketball.GetGamesMethod;
 import com.solvd.test.carina.api.activity.GetActivityMethod;
-import com.solvd.test.carina.api.basketball.GetPlayersBySeasonMethod;
 import com.solvd.test.carina.api.basketball.GetPlayerMethod;
-import com.solvd.test.carina.api.basketball.GetTopScorerMethod;
+import com.solvd.test.carina.api.basketball.GetPlayoffsAssistsMethod;
+import com.solvd.test.carina.api.basketball.GetReboundsMethod;
+import com.solvd.test.carina.api.basketball.GetTopAssistsMethod;
 import com.solvd.test.carina.api.cats.GetBreedsMethod;
 import com.zebrunner.carina.api.apitools.validation.JsonCompareKeywords;
 import com.zebrunner.carina.core.IAbstractTest;
@@ -18,7 +19,7 @@ import org.testng.annotations.Test;
 import java.lang.invoke.MethodHandles;
 
 @MethodOwner(owner = "Niemiah")
-public class AppTest implements IAbstractTest {
+public class APITest implements IAbstractTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
@@ -56,11 +57,11 @@ public class AppTest implements IAbstractTest {
 
     @TestRailCases(testCasesId = "4")
     @Test
-    public void testGetPlayersBySeason() {
-        GetPlayersBySeasonMethod getPlayersBySeasonMethods = new GetPlayersBySeasonMethod();
-        getPlayersBySeasonMethods.callAPIExpectSuccess();
-        getPlayersBySeasonMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
-        getPlayersBySeasonMethods.validateResponseAgainstSchema("api/playersBySeason_get/rs.schema");
+    public void testGetPlayoffsAssists() {
+        GetPlayoffsAssistsMethod getPlayoffsAssistsMethods = new GetPlayoffsAssistsMethod();
+        getPlayoffsAssistsMethods.callAPIExpectSuccess();
+        getPlayoffsAssistsMethods.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getPlayoffsAssistsMethods.validateResponseAgainstSchema("api/playoffs_get/rs.schema");
     }
 
     @TestRailCases(testCasesId = "5")
@@ -74,11 +75,20 @@ public class AppTest implements IAbstractTest {
 
     @TestRailCases(testCasesId = "6")
     @Test
-    public void testGetTopScorer() {
-        GetTopScorerMethod getTopScorerMethods = new GetTopScorerMethod();
-        getTopScorerMethods.callAPIExpectSuccess();
-        getTopScorerMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
-        getTopScorerMethods.validateResponseAgainstSchema("api/player_get/rs.schema");
+    public void testGetTopRebounder() {
+        GetReboundsMethod getReboundsMethods = new GetReboundsMethod();
+        getReboundsMethods.callAPIExpectSuccess();
+        getReboundsMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getReboundsMethods.validateResponseAgainstSchema("api/rebounds_get/rs.schema");
+    }
+
+    @TestRailCases(testCasesId = "7")
+    @Test
+    public void testGetTopAssists() {
+        GetTopAssistsMethod getTopAssistsMethods = new GetTopAssistsMethod();
+        getTopAssistsMethods.callAPIExpectSuccess();
+        getTopAssistsMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getTopAssistsMethods.validateResponseAgainstSchema("api/player_get/rs.schema");
     }
 
 

@@ -9,11 +9,11 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
 
-@Endpoint(url = "${base_url}api/playerdata/season/2023", methodType = HttpMethodType.GET)
-@ResponseTemplatePath(path = "api/games/_get/rs.json")
+@Endpoint(url = "${base_url}api/top_assists/playoffs/2023/", methodType = HttpMethodType.GET)
+@ResponseTemplatePath(path = "api/playoffs_get/rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-public class GetPlayersBySeasonMethod extends AbstractApiMethodV2 {
-    public GetPlayersBySeasonMethod(){
+public class GetPlayoffsAssistsMethod extends AbstractApiMethodV2 {
+    public GetPlayoffsAssistsMethod(){
         replaceUrlPlaceholder("base_url", Configuration.getRequired("ball_url"));
     }
 }

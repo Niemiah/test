@@ -9,11 +9,11 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
 
-@Endpoint(url = "${base_url}api/playerdata/topscorers/total/season/2023/", methodType = HttpMethodType.GET)
-@ResponseTemplatePath(path = "api/games/_get/rs.json")
+@Endpoint(url = "${base_url}api/top_rebounds/totals/2023/", methodType = HttpMethodType.GET)
+@ResponseTemplatePath(path = "api/rebounds_get/rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-public class GetTopScorerMethod extends AbstractApiMethodV2 {
-    public GetTopScorerMethod(){
+public class GetReboundsMethod extends AbstractApiMethodV2 {
+    public GetReboundsMethod(){
         replaceUrlPlaceholder("base_url", Configuration.getRequired("ball_url"));
     }
 }

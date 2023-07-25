@@ -2,9 +2,8 @@
   "count": 8,
   "next": null,
   "previous": null,
-  "data": {
-    "results": [
-      {
+  "results": [
+    {
       "id": 203,
       "player_name": "Nikola Jokić",
       "age": 27,
@@ -260,6 +259,5 @@
       "team": "DEN",
       "season": 2016
     }
-    ]
-  }
+  ]
 }

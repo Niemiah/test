@@ -6,11 +6,12 @@
       "type": "integer"
     },
     "next": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "uri"
     },
     "previous": {
-      "type": ["string", "null"]
+      "type": ["string", "null"],
+      "format": "uri"
     },
     "results": {
       "type": "array",
