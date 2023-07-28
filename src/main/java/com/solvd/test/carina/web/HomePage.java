@@ -1,4 +1,4 @@
-package com.solvd.test.carina.gui;
+package com.solvd.test.carina.web;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;

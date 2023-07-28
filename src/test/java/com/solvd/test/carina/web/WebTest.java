@@ -1,6 +1,5 @@
 package com.solvd.test.carina.web;
 
-import com.solvd.test.carina.gui.*;
 import com.zebrunner.carina.core.IAbstractTest;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import com.zebrunner.carina.core.report.testrail.TestRailCases;
@@ -23,7 +22,7 @@ public class WebTest implements IAbstractTest {
     }
 
     @TestRailCases(testCasesId = "9")
-    @Test(testName = "Nike home to accessories.", description = "Nike home to men's page.")
+    @Test(testName = "Nike home to accessories", description = "Nike home to men's page.")
     public void testNavigationHomeToAccessoriesPage() {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
@@ -36,7 +35,7 @@ public class WebTest implements IAbstractTest {
     }
 
     @TestRailCases(testCasesId = "10")
-    @Test(testName = "Nike home to men.", description = "Nike home to men's page.")
+    @Test(testName = "Nike home to sales", description = "Nike home to men's page.")
     public void testNavigationHomeToSalePage() {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
@@ -49,7 +48,7 @@ public class WebTest implements IAbstractTest {
     }
 
     @TestRailCases(testCasesId = "11")
-    @Test(testName = "Nike home to kids.", description = "Nike home page to kid's page.")
+    @Test(testName = "Nike home to kids", description = "Nike home page to kid's page.")
     public void testNavigationFromHomeToKidsPage() {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
@@ -61,7 +60,7 @@ public class WebTest implements IAbstractTest {
     }
 
     @TestRailCases(testCasesId = "12")
-    @Test(testName = "Nike home to women.", description = "Nike home page to women page.")
+    @Test(testName = "Nike home to women", description = "Nike home page to women page.")
     public void testNavigationFromHomeToWomenPage() {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
