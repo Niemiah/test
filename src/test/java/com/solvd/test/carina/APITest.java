@@ -31,7 +31,7 @@ public class APITest implements IAbstractTest {
     public void testGetBreeds() {
         GetBreedsMethod getBreedsMethods = new GetBreedsMethod();
         getBreedsMethods.callAPIExpectSuccess();
-        getBreedsMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getBreedsMethods.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getBreedsMethods.validateResponseAgainstSchema("api/breeds_get/rs.schema");
     }
 
@@ -69,7 +69,7 @@ public class APITest implements IAbstractTest {
     public void testGetPlayer() {
         GetPlayerMethod getPlayerMethods = new GetPlayerMethod();
         getPlayerMethods.callAPIExpectSuccess();
-        getPlayerMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getPlayerMethods.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getPlayerMethods.validateResponseAgainstSchema("api/player_get/rs.schema");
     }
 
@@ -78,7 +78,7 @@ public class APITest implements IAbstractTest {
     public void testGetTopRebounder() {
         GetReboundsMethod getReboundsMethods = new GetReboundsMethod();
         getReboundsMethods.callAPIExpectSuccess();
-        getReboundsMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getReboundsMethods.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getReboundsMethods.validateResponseAgainstSchema("api/rebounds_get/rs.schema");
     }
 
