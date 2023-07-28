@@ -3,7 +3,7 @@
 
     <test name="API tests">
         <classes>
-            <class name="com.solvd.test.carina.APITest" />
+            <class name="com.solvd.test.carina.api.APITest" />
         </classes>
     </test>
 

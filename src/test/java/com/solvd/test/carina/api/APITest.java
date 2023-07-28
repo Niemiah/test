@@ -1,4 +1,4 @@
-package com.solvd.test.carina;
+package com.solvd.test.carina.api;
 
 import com.solvd.test.carina.api.basketball.GetGamesMethod;
 import com.solvd.test.carina.api.activity.GetActivityMethod;
