@@ -27,7 +27,7 @@ public class APITest implements IAbstractTest {
 
 
     @TestRailCases(testCasesId = "1")
-    @Test
+    @Test(testName = "Cat Breeds" , description = "Random Breed of Cats.")
     public void testGetBreeds() {
         GetBreedsMethod getBreedsMethods = new GetBreedsMethod();
         getBreedsMethods.callAPIExpectSuccess();
@@ -47,7 +47,7 @@ public class APITest implements IAbstractTest {
 
 
     @TestRailCases(testCasesId = "3")
-    @Test
+    @Test(testName = "Get Activity" , description = "Get a random activity.")
     public void testGetActivity() {
         GetActivityMethod getActivityMethods = new GetActivityMethod();
         getActivityMethods.callAPIExpectSuccess();
@@ -56,7 +56,7 @@ public class APITest implements IAbstractTest {
     }
 
     @TestRailCases(testCasesId = "4")
-    @Test
+    @Test(testName = "Playoffs Assists" , description = "Top 20 players by assists in playoffs.")
     public void testGetPlayoffsAssists() {
         GetPlayoffsAssistsMethod getPlayoffsAssistsMethods = new GetPlayoffsAssistsMethod();
         getPlayoffsAssistsMethods.callAPIExpectSuccess();
@@ -65,7 +65,7 @@ public class APITest implements IAbstractTest {
     }
 
     @TestRailCases(testCasesId = "5")
-    @Test
+    @Test(testName = "Player Stats" , description = "Stats of a specific player.")
     public void testGetPlayer() {
         GetPlayerMethod getPlayerMethods = new GetPlayerMethod();
         getPlayerMethods.callAPIExpectSuccess();
@@ -74,7 +74,7 @@ public class APITest implements IAbstractTest {
     }
 
     @TestRailCases(testCasesId = "6")
-    @Test
+    @Test(testName = "Top Rebounders" , description = "Top 20 rebounders.")
     public void testGetTopRebounder() {
         GetReboundsMethod getReboundsMethods = new GetReboundsMethod();
         getReboundsMethods.callAPIExpectSuccess();
@@ -83,7 +83,7 @@ public class APITest implements IAbstractTest {
     }
 
     @TestRailCases(testCasesId = "7")
-    @Test
+    @Test(testName = "Top Assists" , description = "Top 20 players by assists.")
     public void testGetTopAssists() {
         GetTopAssistsMethod getTopAssistsMethods = new GetTopAssistsMethod();
         getTopAssistsMethods.callAPIExpectSuccess();
