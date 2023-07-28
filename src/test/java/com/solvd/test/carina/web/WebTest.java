@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class WebTest implements IAbstractTest {
 
     @TestRailCases(testCasesId = "8")
-    @Test(testName = "Nike home to men.", description = "Nike home to men's page.")
+    @Test(testName = "Nike home to men", description = "Nike home to men's page.")
     public void testNavigationHomeToMenPage() {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
