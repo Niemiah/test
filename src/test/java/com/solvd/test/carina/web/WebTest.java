@@ -15,7 +15,7 @@ public class WebTest implements IAbstractTest {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
         homePage.assertPageOpened();
-        homePage.pause(10);
+        homePage.pause(8);
         MenPageBase menPage = initPage(getDriver(), MenPageBase.class);
         menPage.open();
         menPage.assertPageOpened();
@@ -28,16 +28,24 @@ public class WebTest implements IAbstractTest {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
         homePage.assertPageOpened();
-        homePage.pause(10);
+        homePage.pause(8);
         AccessoriesPageBase accessoriesPage = initPage(getDriver(), AccessoriesPageBase.class);
         accessoriesPage.open();
         accessoriesPage.assertPageOpened();
+        accessoriesPage.pause(5);
     }
 
     @TestRailCases(testCasesId = "10")
-    @Test(testName = "Nike women's page.", description = "Nike women's page.")
-    public void testNavigationToWomenPage() {
-        WomenPageBase womenPage = initPage(getDriver(), WomenPageBase.class);
+    @Test(testName = "Nike home to men.", description = "Nike home to men's page.")
+    public void testNavigationHomeToSalePage() {
+        HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
+        homePage.open();
+        homePage.assertPageOpened();
+        homePage.pause(8);
+        SalePageBase salePage = initPage(getDriver(), SalePageBase.class);
+        salePage.open();
+        salePage.assertPageOpened();
+        salePage.pause(5);
     }
 
     @TestRailCases(testCasesId = "11")
@@ -46,9 +54,10 @@ public class WebTest implements IAbstractTest {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
         homePage.assertPageOpened();
-        homePage.pause(10);
+        homePage.pause(8);
         KidPageBase kidPageBase = initPage(getDriver(), KidPageBase.class);
         kidPageBase.assertPageOpened();
+        kidPageBase.pause(5);
     }
 
     @TestRailCases(testCasesId = "12")
@@ -57,10 +66,9 @@ public class WebTest implements IAbstractTest {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         homePage.open();
         homePage.assertPageOpened();
-        homePage.pause(10);
+        homePage.pause(8);
         WomenPageBase womenPageBase = initPage(getDriver(), WomenPageBase.class);
         womenPageBase.assertPageOpened();
+        womenPageBase.pause(5);
     }
-
-
 }
