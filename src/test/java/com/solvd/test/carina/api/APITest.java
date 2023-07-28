@@ -1,11 +1,10 @@
 package com.solvd.test.carina.api;
 
-import com.solvd.test.carina.api.basketball.GetGamesMethod;
 import com.solvd.test.carina.api.activity.GetActivityMethod;
 import com.solvd.test.carina.api.basketball.GetPlayerMethod;
 import com.solvd.test.carina.api.basketball.GetPlayoffsAssistsMethod;
 import com.solvd.test.carina.api.basketball.GetReboundsMethod;
-import com.solvd.test.carina.pokemon.GetPokemonMethod;
+import com.solvd.test.carina.api.pokemon.GetPokemonMethod;
 import com.solvd.test.carina.api.basketball.GetTopAssistsMethod;
 import com.solvd.test.carina.api.cats.GetBreedsMethod;
 import com.zebrunner.carina.api.apitools.validation.JsonCompareKeywords;

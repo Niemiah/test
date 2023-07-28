@@ -1,4 +1,4 @@
-package com.solvd.test.carina.api.basketball;
+package com.solvd.test.carina.api.pokemon;
 
 import com.zebrunner.carina.api.AbstractApiMethodV2;
 import com.zebrunner.carina.api.annotation.Endpoint;
@@ -9,11 +9,11 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
 
-@Endpoint(url = "${base_url}/games", methodType = HttpMethodType.GET)
-@ResponseTemplatePath(path = "api/games/_get/rs.json")
+@Endpoint(url = "${base_url}pokemon/ditto", methodType = HttpMethodType.GET)
+@ResponseTemplatePath(path = "api/pokemon_get/rs.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
-public class GetGamesMethod extends AbstractApiMethodV2 {
-    public GetGamesMethod(){
-        replaceUrlPlaceholder("base_url", Configuration.getRequired("new_url"));
+public class GetPokemonMethod extends AbstractApiMethodV2 {
+    public GetPokemonMethod(){
+        replaceUrlPlaceholder("base_url", Configuration.getRequired("pokemon_url"));
     }
 }
