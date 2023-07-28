@@ -1,0 +1,21 @@
+{
+  "abilities": [
+    {
+      "ability": {
+        "name": "string",
+        "url": "string"
+      },
+      "is_hidden": "boolean",
+      "slot": "integer"
+    }
+  ],
+  "game_indices": [
+    {
+      "game_index": "integer",
+      "version": {
+        "name": "string",
+        "url": "string"
+      }
+    }
+  ]
+}

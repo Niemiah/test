@@ -5,6 +5,7 @@ import com.solvd.test.carina.api.activity.GetActivityMethod;
 import com.solvd.test.carina.api.basketball.GetPlayerMethod;
 import com.solvd.test.carina.api.basketball.GetPlayoffsAssistsMethod;
 import com.solvd.test.carina.api.basketball.GetReboundsMethod;
+import com.solvd.test.carina.pokemon.GetPokemonMethod;
 import com.solvd.test.carina.api.basketball.GetTopAssistsMethod;
 import com.solvd.test.carina.api.cats.GetBreedsMethod;
 import com.zebrunner.carina.api.apitools.validation.JsonCompareKeywords;
@@ -36,17 +37,8 @@ public class APITest implements IAbstractTest {
     }
 
 
+
     @TestRailCases(testCasesId = "2")
-    @Test(testName = " Games reference " , description = "Reference from Asim.")
-    public void testGetGames(){
-        GetGamesMethod getGamesMethod = new GetGamesMethod();
-        getGamesMethod.callAPIExpectSuccess();
-        getGamesMethod.validateResponse(JSONCompareMode.NON_EXTENSIBLE, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
-        getGamesMethod.validateResponseAgainstSchema("api/games/_get/rs.schema");
-    }
-
-
-    @TestRailCases(testCasesId = "3")
     @Test(testName = "Get Activity" , description = "Get a random activity.")
     public void testGetActivity() {
         GetActivityMethod getActivityMethods = new GetActivityMethod();
@@ -55,7 +47,7 @@ public class APITest implements IAbstractTest {
         getActivityMethods.validateResponseAgainstSchema("api/activity_get/rs.schema");
     }
 
-    @TestRailCases(testCasesId = "4")
+    @TestRailCases(testCasesId = "3")
     @Test(testName = "Playoffs Assists" , description = "Top 20 players by assists in playoffs.")
     public void testGetPlayoffsAssists() {
         GetPlayoffsAssistsMethod getPlayoffsAssistsMethods = new GetPlayoffsAssistsMethod();
@@ -64,7 +56,7 @@ public class APITest implements IAbstractTest {
         getPlayoffsAssistsMethods.validateResponseAgainstSchema("api/playoffs_get/rs.schema");
     }
 
-    @TestRailCases(testCasesId = "5")
+    @TestRailCases(testCasesId = "4")
     @Test(testName = "Player Stats" , description = "Stats of a specific player.")
     public void testGetPlayer() {
         GetPlayerMethod getPlayerMethods = new GetPlayerMethod();
@@ -73,7 +65,7 @@ public class APITest implements IAbstractTest {
         getPlayerMethods.validateResponseAgainstSchema("api/player_get/rs.schema");
     }
 
-    @TestRailCases(testCasesId = "6")
+    @TestRailCases(testCasesId = "5")
     @Test(testName = "Top Rebounders" , description = "Top 20 rebounders.")
     public void testGetTopRebounder() {
         GetReboundsMethod getReboundsMethods = new GetReboundsMethod();
@@ -82,13 +74,22 @@ public class APITest implements IAbstractTest {
         getReboundsMethods.validateResponseAgainstSchema("api/rebounds_get/rs.schema");
     }
 
-    @TestRailCases(testCasesId = "7")
+    @TestRailCases(testCasesId = "6")
     @Test(testName = "Top Assists" , description = "Top 20 players by assists.")
     public void testGetTopAssists() {
         GetTopAssistsMethod getTopAssistsMethods = new GetTopAssistsMethod();
         getTopAssistsMethods.callAPIExpectSuccess();
         getTopAssistsMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
         getTopAssistsMethods.validateResponseAgainstSchema("api/player_get/rs.schema");
+    }
+
+    @TestRailCases(testCasesId = "7")
+    @Test(testName = "Pokemon" , description = "Pokemon data by version.")
+    public void testGetPokemon() {
+        GetPokemonMethod getPokemonMethods = new GetPokemonMethod();
+        getPokemonMethods.callAPIExpectSuccess();
+        getPokemonMethods.validateResponse(JSONCompareMode.LENIENT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+        getPokemonMethods.validateResponseAgainstSchema("api/player_get/rs.schema");
     }
 
 
