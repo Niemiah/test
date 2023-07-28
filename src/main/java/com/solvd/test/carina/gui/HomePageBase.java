@@ -13,8 +13,8 @@ public abstract class HomePageBase extends AbstractPage {
 
     public abstract WomenPageBase openWomenPage();
 
-//    public abstract KidsPageBase openKidsPage();
-//
-//    public abstract AccessoriesPageBase openAccessoriesPage();
+    public abstract AccessoriesPageBase openAccessoriesPage();
+
+    public abstract KidPageBase openKidPage();
 
 }

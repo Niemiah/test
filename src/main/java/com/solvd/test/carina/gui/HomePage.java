@@ -8,13 +8,21 @@ import org.openqa.selenium.support.FindBy;
 @DeviceType(pageType = DeviceType.Type.DESKTOP, parentClass = HomePageBase.class)
 public class HomePage extends HomePageBase {
 
-    @FindBy(xpath = "//a[@href='men']")
+    @FindBy(xpath = "//a[@href='/men']")
 
     private ExtendedWebElement menMenu;
 
     @FindBy(xpath = "//a[@href='/women']")
 
     private ExtendedWebElement womenMenu;
+
+    @FindBy(xpath = "//a[@href='/accessories']")
+
+    private ExtendedWebElement accessoriesMenu;
+
+    @FindBy(xpath = "//a[@href='/kid']")
+
+    private ExtendedWebElement kidMenu;
 
 
     public HomePage(WebDriver driver) {
@@ -32,6 +40,18 @@ public class HomePage extends HomePageBase {
     public WomenPageBase openWomenPage(){
         womenMenu.click();
         return initPage(driver, WomenPageBase.class);
+    }
+
+    @Override
+    public AccessoriesPageBase openAccessoriesPage(){
+        accessoriesMenu.click();
+        return initPage(driver, AccessoriesPageBase.class);
+    }
+
+    @Override
+    public KidPageBase openKidPage(){
+        kidMenu.click();
+        return initPage(driver, KidPageBase.class);
     }
 
 }

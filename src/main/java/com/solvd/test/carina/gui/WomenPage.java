@@ -9,11 +9,11 @@ import org.openqa.selenium.support.FindBy;
 public class WomenPage extends WomenPageBase {
 
     @FindBy(xpath = "//a[@href='https://www.nike.com/women']")
-    private ExtendedWebElement womenPageTitle;
+    private ExtendedWebElement womenPagePath;
 
     public WomenPage(WebDriver driver) {
         super(driver);
-        setUiLoadedMarker(womenPageTitle);
+        setUiLoadedMarker(womenPagePath);
         setPageURL("/women");
     }
 }

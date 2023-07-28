@@ -8,12 +8,12 @@ import org.openqa.selenium.support.FindBy;
 @DeviceType(pageType = DeviceType.Type.DESKTOP, parentClass = MenPageBase.class)
 public class MenPage extends MenPageBase {
 
-    @FindBy(xpath = "//h1[text()='Men']")
-    private ExtendedWebElement menPageTitle;
+    @FindBy(xpath = "//a[@href='https://www.nike.com/men']")
+    private ExtendedWebElement menPagePath;
 
     public MenPage(WebDriver driver) {
         super(driver);
-        setUiLoadedMarker(menPageTitle);
+        setUiLoadedMarker(menPagePath);
         setPageURL("/men");
     }
 }
