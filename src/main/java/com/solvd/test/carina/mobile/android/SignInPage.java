@@ -5,6 +5,7 @@ import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import org.openqa.selenium.By;
+import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +36,11 @@ public class SignInPage extends SignInPageBase implements IMobileUtils {
     public void typeEmail(String email) {
         emailInputField.type(email);
         hideKeyboard();
+    }
+
+    @Override
+    public boolean isSignInBtnActive() {
+        return Boolean.parseBoolean(signInBtn.getAttribute("enabled"));
     }
 
 }

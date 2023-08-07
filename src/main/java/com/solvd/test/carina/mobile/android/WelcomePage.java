@@ -18,10 +18,10 @@ public class WelcomePage extends WelcomePageBase implements IMobileUtils {
         super(driver);
     }
 
-    @FindBy(id = "com.nike.omega:id/swoosh")
+    @FindBy(id = "swoosh")
     private ExtendedWebElement title;
 
-    @FindBy(id = "com.nike.omega:id/legacy_login_button")
+    @FindBy(id = "legacy_login_button")
     private ExtendedWebElement signInBtn;
 
     @Override

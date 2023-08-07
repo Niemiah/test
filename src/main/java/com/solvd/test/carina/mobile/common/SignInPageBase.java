@@ -12,4 +12,6 @@ public abstract class SignInPageBase extends AbstractPage {
 
     public abstract void typeEmail(String email);
 
+    public abstract boolean isSignInBtnActive();
+
 }
