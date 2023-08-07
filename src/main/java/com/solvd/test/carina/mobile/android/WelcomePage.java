@@ -1,15 +1,13 @@
 package com.solvd.test.carina.mobile.android;
 
-import com.solvd.test.carina.mobile.common.SignInPageBase;
+import com.solvd.test.carina.mobile.common.EmailPageBase;
 import com.solvd.test.carina.mobile.common.WelcomePageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import java.util.List;
+
 @DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = WelcomePageBase.class)
 public class WelcomePage extends WelcomePageBase implements IMobileUtils {
 
@@ -30,8 +28,8 @@ public class WelcomePage extends WelcomePageBase implements IMobileUtils {
     }
 
     @Override
-    public SignInPageBase clickSignInBtn() {
+    public EmailPageBase clickSignInBtn() {
         signInBtn.click();
-        return initPage(getDriver(), SignInPageBase.class);
+        return initPage(getDriver(), EmailPageBase.class);
     }
 }
