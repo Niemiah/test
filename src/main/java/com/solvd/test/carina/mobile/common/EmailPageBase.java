@@ -10,6 +10,9 @@ public abstract class EmailPageBase extends AbstractPage {
 
     public abstract void typeEmail(String email);
 
-    public abstract boolean isSignInBtnActive();
+    public abstract void typePassword(String password);
+
+    public abstract boolean isContinueBtnActive();
+
 
 }

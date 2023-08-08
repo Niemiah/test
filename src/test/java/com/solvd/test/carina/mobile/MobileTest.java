@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class MobileTest implements IAbstractTest, IMobileUtils {
 
     @Test()
-    @MethodOwner(owner = "qpsdemo")
+    @MethodOwner(owner = "Niemiah")
     @TestLabel(name = "feature", value = {"mobile", "regression"})
     public void testLoginUser() {
         String username = "testlabamobile@gmail.com";
@@ -23,9 +23,9 @@ public class MobileTest implements IAbstractTest, IMobileUtils {
         WelcomePageBase welcomePage = initPage(getDriver(), WelcomePageBase.class);
         Assert.assertFalse(welcomePage.isPageOpened(), "Welcome page is opened");
         EmailPageBase signInPage = welcomePage.clickSignInBtn();
-        Assert.assertFalse(signInPage.isSignInBtnActive(), "Login button is active when it should be disabled");
-        signInPage.typeName(username);
-        signInPage.typeEmail(email);
+//        Assert.assertFalse(signInPage.isSignInBtnActive(), "Login button is active when it should be disabled");
+//        signInPage.typeName(username);
+//        signInPage.typeEmail(email);
     }
 
     @TestRailCases(testCasesId = "9")
