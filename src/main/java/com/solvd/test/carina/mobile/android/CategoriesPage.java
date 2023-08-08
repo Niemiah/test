@@ -15,11 +15,30 @@ public class CategoriesPage extends CategoriesPageBase implements IMobileUtils {
         super(driver);
     }
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Shop']")
-    private ExtendedWebElement shopCategoryBtn;
+    @FindBy(id = "search_button")
+    private ExtendedWebElement searchBtn;
 
+    @FindBy(id = "inbox_icon")
+    private ExtendedWebElement inboxBtn;
 
+    @FindBy(id = "cart_icon")
+    private ExtendedWebElement cartBtn;
 
+    public void clickSearchBtn() {
+        searchBtn.click();
+    }
 
+    public void clickInboxBtn() {
+        inboxBtn.click();
+    }
+
+    public void clickCartBtn() {
+        cartBtn.click();
+    }
+
+    @Override
+    public boolean isPageOpened() {
+        return searchBtn.isPresent();
+    }
 
 }

@@ -3,7 +3,7 @@
 
     <test name="Android Tests">
         <classes>
-            <class name="com.solvd.test.carina.mobile.MobileNewTest" />
+            <class name="com.solvd.test.carina.mobile.MobileTest" />
         </classes>
     </test>
 

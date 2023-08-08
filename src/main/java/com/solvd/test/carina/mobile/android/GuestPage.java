@@ -9,13 +9,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 @DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = GuestPageBase.class)
-public class GuestPage extends CategoriesPageBase implements IMobileUtils {
+public class GuestPage extends GuestPageBase implements IMobileUtils {
 
 
     public GuestPage(WebDriver driver) {
         super(driver);
     }
 
+    @FindBy(xpath = "//android.widget.TextView[@text='Welcome']")
+    private ExtendedWebElement welcomeImage;
     @FindBy(xpath = "//android.widget.TextView[@text='My Orders']")
     private ExtendedWebElement myOrdersBtn;
 
@@ -55,7 +57,10 @@ public class GuestPage extends CategoriesPageBase implements IMobileUtils {
         customerServiceBtn.click();
     }
 
-
+    @Override
+    public boolean isPageOpened() {
+        return welcomeImage.isPresent();
+    }
 
 
 

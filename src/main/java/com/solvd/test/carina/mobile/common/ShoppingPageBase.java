@@ -14,4 +14,6 @@ public abstract class ShoppingPageBase extends AbstractPage {
     public abstract CategoriesPageBase clickShopBtn();
 
     public abstract GuestPageBase clickGuestBtn();
+
+    public abstract WalletPageBase clickWalletBtn();
 }

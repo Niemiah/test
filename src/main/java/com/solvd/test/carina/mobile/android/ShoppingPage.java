@@ -3,6 +3,7 @@ package com.solvd.test.carina.mobile.android;
 import com.solvd.test.carina.mobile.common.GuestPageBase;
 import com.solvd.test.carina.mobile.common.ShoppingPageBase;
 import com.solvd.test.carina.mobile.common.CategoriesPageBase;
+import com.solvd.test.carina.mobile.common.WalletPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
@@ -22,6 +23,11 @@ public class ShoppingPage extends ShoppingPageBase implements IMobileUtils {
 
     @FindBy(xpath = "//android.widget.TextView[@text='Guest']")
     private ExtendedWebElement guestBtn;
+
+    @FindBy(xpath = "//android.widget.TextView[@text='Wallet']")
+    private ExtendedWebElement walletBtn;
+
+
 
     @FindBy(xpath = "//android.widget.Button[@text='Don’t allow']")
     private ExtendedWebElement dntAllowBtn2;
@@ -46,6 +52,12 @@ public class ShoppingPage extends ShoppingPageBase implements IMobileUtils {
     public GuestPageBase clickGuestBtn() {
         guestBtn.click();
         return initPage(getDriver(), GuestPageBase.class);
+    }
+
+    @Override
+    public WalletPageBase clickWalletBtn() {
+        walletBtn.click();
+        return initPage(getDriver(), WalletPageBase.class);
     }
 
     @Override

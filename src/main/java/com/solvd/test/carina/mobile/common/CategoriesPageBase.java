@@ -8,5 +8,8 @@ public abstract class CategoriesPageBase extends AbstractPage {
         super(driver);
     }
 
+    public abstract void clickSearchBtn();
+    public abstract void clickInboxBtn();
+    public abstract void clickCartBtn();
 
 }
