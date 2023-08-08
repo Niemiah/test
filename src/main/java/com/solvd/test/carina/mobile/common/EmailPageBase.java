@@ -10,7 +10,7 @@ public abstract class EmailPageBase extends AbstractPage {
 
     public abstract void typeEmail(String email);
 
-    public abstract HomePageBase clickContinueBtn();
+    public abstract PasswordPageBase clickContinueBtn();
 
     public abstract HomePageBase clickLoginBtn();
 

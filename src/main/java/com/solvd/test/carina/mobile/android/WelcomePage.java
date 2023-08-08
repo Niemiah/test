@@ -20,7 +20,7 @@ public class WelcomePage extends WelcomePageBase implements IMobileUtils {
     private ExtendedWebElement title;
 
     @FindBy(id = "legacy_login_button")
-    private ExtendedWebElement signInBtn;
+    private ExtendedWebElement loginBtn;
 
     @Override
     public boolean isPageOpened() {
@@ -28,8 +28,8 @@ public class WelcomePage extends WelcomePageBase implements IMobileUtils {
     }
 
     @Override
-    public EmailPageBase clickSignInBtn() {
-        signInBtn.click();
+    public EmailPageBase clickLoginBtn() {
+        loginBtn.click();
         return initPage(getDriver(), EmailPageBase.class);
     }
 }

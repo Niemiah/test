@@ -8,6 +8,6 @@ public abstract class WelcomePageBase extends AbstractPage {
         super(driver);
     }
 
-    public abstract EmailPageBase clickSignInBtn();
+    public abstract EmailPageBase clickLoginBtn();
 
 }

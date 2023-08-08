@@ -22,10 +22,8 @@ public class MobileTest implements IAbstractTest, IMobileUtils {
         String password = "@Testlaba1";
         WelcomePageBase welcomePage = initPage(getDriver(), WelcomePageBase.class);
         Assert.assertFalse(welcomePage.isPageOpened(), "Welcome page is opened");
-        EmailPageBase signInPage = welcomePage.clickSignInBtn();
-//        Assert.assertFalse(signInPage.isSignInBtnActive(), "Login button is active when it should be disabled");
-//        signInPage.typeName(username);
-//        signInPage.typeEmail(email);
+        EmailPageBase emailPage = welcomePage.clickLoginBtn();
+        emailPage.typeEmail(email);
     }
 
     @TestRailCases(testCasesId = "9")

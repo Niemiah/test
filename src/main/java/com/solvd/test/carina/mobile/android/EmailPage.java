@@ -2,6 +2,7 @@ package com.solvd.test.carina.mobile.android;
 
 import com.solvd.test.carina.mobile.common.EmailPageBase;
 import com.solvd.test.carina.mobile.common.HomePageBase;
+import com.solvd.test.carina.mobile.common.PasswordPageBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
@@ -41,9 +42,9 @@ public class EmailPage extends EmailPageBase implements IMobileUtils {
     }
 
     @Override
-    public HomePageBase clickContinueBtn() {
+    public PasswordPageBase clickContinueBtn() {
         continueBtn.click();
-        return initPage(getDriver(), HomePageBase.class);
+        return initPage(getDriver(), PasswordPageBase.class);
     }
 
     @Override
